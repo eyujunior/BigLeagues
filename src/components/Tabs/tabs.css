@@ -1,0 +1,20 @@
+.tab-container {
+    background-color: red;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tab-item.current {
+    background-color: #fff;
+    color: red;
+    padding: 1.5rem 33rem 1.5rem 3rem;
+}
+
+.tab-item {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 1rem 3rem;
+}
