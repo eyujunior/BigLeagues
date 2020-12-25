@@ -7,7 +7,7 @@ const Trow = (props) => {
 
   useEffect(() => {
     fetch(
-      `https://app.sportdataapi.com/api/v1/soccer/teams/${props.data.team_id}?apikey=e698b620-4479-11eb-86f1-c11e8b8f9491`
+      `https://app.sportdataapi.com/api/v1/soccer/teams/${props.data.team_id}?apikey=8bba42e0-4432-11eb-bfb6-9f8b3285323b`
     )
       .then((data) => data.json())
       .then((res) => setTeamName(res));
@@ -25,7 +25,6 @@ const Trow = (props) => {
       <tr>
         <td className="stat-item">{props.rank}</td>
         <td className="stat-item">{team}</td>
-
         <td className="stat-item">{sorted.overall.games_played}</td>
         <td className="stat-item">{sorted.overall.won}</td>
         <td className="stat-item">{sorted.overall.draw}</td>
