@@ -32,6 +32,7 @@ const Basic = (props) => (
             </ul>
           </nav>
         </div>
+        <Route path="/" exact component={Hero} />
         <Route
           path="/leagues"
           render={() => (
@@ -47,7 +48,7 @@ const Basic = (props) => (
           )}
         />
 
-        <Route path="/" exact component={Hero} />
+       
       </header>
 
       <Route path="/" exact component={Howto} />
