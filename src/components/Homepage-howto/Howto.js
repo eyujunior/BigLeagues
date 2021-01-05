@@ -10,7 +10,7 @@ const Howto = () => {
           <div className="howto-item">
             <span className="step-num">1</span>
             <p className="step">
-              go to the leagues dropdown menu in the navbar and choose the
+              go to the leagues menu in the navbar and choose the
               league you are interested in.
             </p>
           </div>
@@ -18,7 +18,7 @@ const Howto = () => {
             <span className="step-num">2</span>
             <p className="step">
               Then you see a page with standing table of the selected league
-              with the table tab selected.
+              with the table tab selected, the default is English premier league.
             </p>
           </div>
           <div className="howto-item">

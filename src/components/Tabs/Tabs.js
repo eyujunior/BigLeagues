@@ -10,7 +10,7 @@ const Tabs = (props) => {
           Table
         </span>
         <span onClick={props.categoryChanged}  className="tab-item tab-item-2">
-          Top Scorers
+          Scorers
         </span>
         <span onClick={props.categoryChanged}  className="tab-item tab-item-3">
           Matches
