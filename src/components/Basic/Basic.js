@@ -12,7 +12,7 @@ const Basic = (props) => (
     <Router>
       <header className="header league">
         <div className="navbar">
-          <Link to="/" className="logo">
+          <Link to="/BigLeagues" className="logo">
             Bigleagues
           </Link>
           <nav className="nav">
@@ -32,7 +32,7 @@ const Basic = (props) => (
             </ul>
           </nav>
         </div>
-        <Route path="/" exact component={Hero} />
+        <Route path="/BigLeagues" component={Hero} />
         <Route
           path="/leagues"
           render={() => (
@@ -51,7 +51,7 @@ const Basic = (props) => (
        
       </header>
 
-      <Route path="/" exact component={Howto} />
+      <Route path="/BigLeagues" exact component={Howto} />
     </Router>
 
     <Footer />

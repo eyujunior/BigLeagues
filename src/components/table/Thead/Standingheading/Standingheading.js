@@ -3,15 +3,15 @@ import "./Standingheading.css";
 
 const Standingheading = () => (
   <tr>
-    <th className="headers-item">Rank</th>
+    <th className="headers-item">No</th>
     <th className="headers-item">Team</th>
     <th className="headers-item">P</th>
-    <th className="headers-item">W</th>
-    <th className="headers-item">D</th>
-    <th className="headers-item">L</th>
+    <th className="headers-item rmv-2">W</th>
+    <th className="headers-item rmv-2">D</th>
+    <th className="headers-item rmv-2">L</th>
     <th className="headers-item">Pts</th>
-    <th className="headers-item">Gf</th>
-    <th className="headers-item">Ga</th>
+    <th className="headers-item rmv-1">Gf</th>
+    <th className="headers-item rmv-1">Ga</th>
     <th className="headers-item">Gd</th>
   </tr>
 );

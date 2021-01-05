@@ -5,9 +5,52 @@
     margin-bottom: 4rem;
     font-size: 3rem;
     text-transform: capitalize;
-    
 }
-.table
-{
+
+.table {
     width: 100%;
+}
+
+@media screen and (max-width:860px) {
+    .headers-item.rmv-2,
+     .stat-item.rmv-2 {
+        display: none !important;
+    }
+    .tab-container .tab-item.current {
+        padding-right: 15rem !important;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .headers-item.rmv-1, .stat-item.rmv-1 {
+        display: none;
+    }
+    .tab-container .tab-item.current {
+        padding-right: 20rem !important;
+    }
+}
+
+@media screen and (max-width:685px) {
+    .tab-container .tab-item.current {
+        padding-right: 7rem !important;
+    }
+    .tab-container .tab-item {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width:590px) {
+    .tab-container .tab-item.current {
+        padding-right: 4rem !important;
+    }
+    .stat-item,.headers-item {
+        padding: .5rem;
+    }
+}
+@media screen and (max-width:480px) {
+    .tab-container .tab-item.current{
+        padding-right: 3rem !important;
+    }
+
+    
 }

@@ -66,13 +66,16 @@ class App extends Component {
   };
 
   leagueChanged = (e) => {
-    this.setState({ selectedLeague: +e.target.value }, this.fetcher);
+    this.setState({ selectedLeague: +e.target.value }, () => {
+      this.fetcher();
+      this.leagueTitle();
+    });
   };
 
   fetcher = () => {
     if (this.state.selectedLeague === 352) {
       fetch(
-        `https://app.sportdataapi.com/api/v1/soccer/standings?apikey=8bba42e0-4432-11eb-bfb6-9f8b3285323b&season_id=${this.state.selectedLeague}`
+        `https://app.sportdataapi.com/api/v1/soccer/standings?apikey=e698b620-4479-11eb-86f1-c11e8b8f9491&season_id=${this.state.selectedLeague}`
       )
         .then((data) => data.json())
         .then((res) => {
@@ -91,7 +94,7 @@ class App extends Component {
         });
     } else if (this.state.selectedLeague === 619) {
       fetch(
-        `https://app.sportdataapi.com/api/v1/soccer/standings?apikey=8bba42e0-4432-11eb-bfb6-9f8b3285323b&season_id=${this.state.selectedLeague}`
+        `https://app.sportdataapi.com/api/v1/soccer/standings?apikey=e698b620-4479-11eb-86f1-c11e8b8f9491&season_id=${this.state.selectedLeague}`
       )
         .then((data) => data.json())
         .then((res) => {
@@ -112,7 +115,7 @@ class App extends Component {
 
     if (this.state.selectedCategory === "scorers") {
       fetch(
-        `https://app.sportdataapi.com/api/v1/soccer/topscorers?apikey=8bba42e0-4432-11eb-bfb6-9f8b3285323b&season_id=${this.state.selectedLeague}`
+        `https://app.sportdataapi.com/api/v1/soccer/topscorers?apikey=e698b620-4479-11eb-86f1-c11e8b8f9491&season_id=${this.state.selectedLeague}`
       )
         .then((data) => data.json())
         .then((res) => {
@@ -131,7 +134,7 @@ class App extends Component {
         });
     } else if (this.state.selectedCategory === "matches") {
       fetch(
-        `https://app.sportdataapi.com/api/v1/soccer/matches?apikey=8bba42e0-4432-11eb-bfb6-9f8b3285323b&season_id=${this.state.selectedLeague}&date_from=${this.state.fromDate}&date_to=${this.state.untilDate}`
+        `https://app.sportdataapi.com/api/v1/soccer/matches?apikey=e698b620-4479-11eb-86f1-c11e8b8f9491&season_id=${this.state.selectedLeague}&date_from=${this.state.fromDate}&date_to=${this.state.untilDate}`
       )
         .then((data) => data.json())
         .then((res) => {
@@ -150,7 +153,7 @@ class App extends Component {
         });
     } else if (this.state.selectedCategory === "standings") {
       fetch(
-        `https://app.sportdataapi.com/api/v1/soccer/standings?apikey=8bba42e0-4432-11eb-bfb6-9f8b3285323b&season_id=${this.state.selectedLeague}`
+        `https://app.sportdataapi.com/api/v1/soccer/standings?apikey=e698b620-4479-11eb-86f1-c11e8b8f9491&season_id=${this.state.selectedLeague}`
       )
         .then((data) => data.json())
         .then((res) => {
@@ -169,6 +172,16 @@ class App extends Component {
         });
     }
   };
+
+  leagueTitle = () => {
+    const header =  document.querySelector('.league-heading');
+   if(this.state.selectedLeague === 352) {
+    header.innerHTML = 'English Premier League';
+   } else {
+    header.innerHTML = 'Serie A';
+
+   }
+  }
 
   componentDidMount() {
     this.fetcher();

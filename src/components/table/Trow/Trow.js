@@ -7,7 +7,7 @@ const Trow = (props) => {
 
   useEffect(() => {
     fetch(
-      `https://app.sportdataapi.com/api/v1/soccer/teams/${props.data.team_id}?apikey=8bba42e0-4432-11eb-bfb6-9f8b3285323b`
+      `https://app.sportdataapi.com/api/v1/soccer/teams/${props.data.team_id}?apikey=e698b620-4479-11eb-86f1-c11e8b8f9491`
     )
       .then((data) => data.json())
       .then((res) => setTeamName(res));
@@ -26,40 +26,47 @@ const Trow = (props) => {
         <td className="stat-item">{props.rank}</td>
         <td className="stat-item">{team}</td>
         <td className="stat-item">{sorted.overall.games_played}</td>
-        <td className="stat-item">{sorted.overall.won}</td>
-        <td className="stat-item">{sorted.overall.draw}</td>
-        <td className="stat-item">{sorted.overall.lost}</td>
+        <td className="stat-item rmv-2">{sorted.overall.won}</td>
+        <td className="stat-item rmv-2">{sorted.overall.draw}</td>
+        <td className="stat-item rmv-2">{sorted.overall.lost}</td>
         <td className="stat-item">{sorted.points}</td>
-        <td className="stat-item">{sorted.overall.goals_scored}</td>
-        <td className="stat-item">{sorted.overall.goals_against}</td>
+        <td className="stat-item rmv-1">{sorted.overall.goals_scored}</td>
+        <td className="stat-item rmv-1">{sorted.overall.goals_against}</td>
         <td className="stat-item">{sorted.overall.goals_diff}</td>
       </tr>
     );
   } else if (props.category === "scorers") {
+
+    const fname = props.data.player.player_name.split(' ');
+    const name = fname[0] + ' ' + fname[fname.length-1];
     return (
       <tr>
         <td className="stat-item">{props.data.pos}</td>
-        <td className="stat-item">{props.data.player.player_name}</td>
+        <td className="stat-item">{name}</td>
         <td className="stat-item">{props.data.goals.overall}</td>
         <td className="stat-item">{props.data.matches_played}</td>
-        <td className="stat-item">
+        <td className="stat-item rmv-2">
           {props.data.penalties == null ? 0 : props.data.penalties}
         </td>
-        <td className="stat-item">{props.data.goals.home}</td>
-        <td className="stat-item">{props.data.goals.away}</td>
+        <td className="stat-item rmv-2">{props.data.goals.home}</td>
+        <td className="stat-item rmv-2">{props.data.goals.away}</td>
       </tr>
     );
   } else if (props.category === "matches") {
-    console.log();
+    const homeFullName = props.data.home_team.name.split(' ');
+    const homeName = homeFullName[0] + ' ' + homeFullName[homeFullName.length-1]
+    const awayFullName = props.data.away_team.name.split(' ');
+    const awayName = awayFullName[0] + ' ' + awayFullName[awayFullName.length-1]
+   
     return (
       <tr>
         <td className="stat-item">{props.data.match_start.split(" ")[0]}</td>
-        <td className="stat-item">{props.data.match_start.split(" ")[1]}</td>
-        <td className="stat-item">{props.data.home_team.name}</td>
+        <td className="stat-item rmv-2">{props.data.match_start.split(" ")[1]}</td>
+        <td className="stat-item">{homeName}</td>
         <td className="stat-item">{props.data.stats.home_score}</td>
-        <td className="stat-item">vs</td>
+        <td className="stat-item rmv-2">vs</td>
         <td className="stat-item">{props.data.stats.away_score}</td>
-        <td className="stat-item">{props.data.away_team.name}</td>
+        <td className="stat-item">{awayName}</td>
       </tr>
     );
   }

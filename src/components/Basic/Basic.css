@@ -46,3 +46,8 @@
   background-color: transparent;
   color: #ffffff;
 }
+@media screen and (max-width:700px) {
+    .nav-item:not(:last-child) {
+        margin-right: 1rem;
+    }
+}
