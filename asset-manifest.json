@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/BigLeagues/static/css/main.0fff439c.chunk.css",
+    "main.css": "/BigLeagues/static/css/main.3c72d438.chunk.css",
     "main.js": "/BigLeagues/static/js/main.afe65ba1.chunk.js",
     "main.js.map": "/BigLeagues/static/js/main.afe65ba1.chunk.js.map",
     "runtime-main.js": "/BigLeagues/static/js/runtime-main.38c60b42.js",
@@ -10,14 +10,14 @@
     "static/js/3.cfc70aa4.chunk.js": "/BigLeagues/static/js/3.cfc70aa4.chunk.js",
     "static/js/3.cfc70aa4.chunk.js.map": "/BigLeagues/static/js/3.cfc70aa4.chunk.js.map",
     "index.html": "/BigLeagues/index.html",
-    "static/css/main.0fff439c.chunk.css.map": "/BigLeagues/static/css/main.0fff439c.chunk.css.map",
+    "static/css/main.3c72d438.chunk.css.map": "/BigLeagues/static/css/main.3c72d438.chunk.css.map",
     "static/js/2.21191096.chunk.js.LICENSE.txt": "/BigLeagues/static/js/2.21191096.chunk.js.LICENSE.txt",
     "static/media/Basic.css": "/BigLeagues/static/media/bg-hero.315f9c41.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.38c60b42.js",
     "static/js/2.21191096.chunk.js",
-    "static/css/main.0fff439c.chunk.css",
+    "static/css/main.3c72d438.chunk.css",
     "static/js/main.afe65ba1.chunk.js"
   ]
 }
