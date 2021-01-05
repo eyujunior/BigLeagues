@@ -60,7 +60,7 @@ const Trow = (props) => {
    
     return (
       <tr>
-        <td className="stat-item">{props.data.match_start.split(" ")[0]}</td>
+        <td className="stat-item rmv-2">{props.data.match_start.split(" ")[0]}</td>
         <td className="stat-item rmv-2">{props.data.match_start.split(" ")[1]}</td>
         <td className="stat-item">{homeName}</td>
         <td className="stat-item">{props.data.stats.home_score}</td>

@@ -9,7 +9,7 @@ const Standingheading = () => (
     <th className="headers-item rmv-2">W</th>
     <th className="headers-item rmv-2">D</th>
     <th className="headers-item rmv-2">L</th>
-    <th className="headers-item">Pts</th>
+    <th className="headers-item">Pt</th>
     <th className="headers-item rmv-1">Gf</th>
     <th className="headers-item rmv-1">Ga</th>
     <th className="headers-item">Gd</th>

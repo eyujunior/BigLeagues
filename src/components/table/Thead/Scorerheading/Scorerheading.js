@@ -8,7 +8,7 @@ const Scorerheading = () => (
       <th className="headers-item rmv-2">Away</th>
       <th className="headers-item rmv-2">Penality</th>
       <th className="headers-item rmv-2">Home</th>
-      <th className="headers-item">Pl</th>
+      <th className="headers-item">Ply</th>
     </tr>
   );
 
