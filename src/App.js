@@ -75,7 +75,7 @@ class App extends Component {
   fetcher = () => {
     if (this.state.selectedLeague === 352) {
       fetch(
-        `https://app.sportdataapi.com/api/v1/soccer/standings?apikey=e698b620-4479-11eb-86f1-c11e8b8f9491&season_id=${this.state.selectedLeague}`
+        `https://app.sportdataapi.com/api/v1/soccer/standings?apikey=0265c4e0-4eb8-11eb-a192-b56af5b95b10&season_id=${this.state.selectedLeague}`
       )
         .then((data) => data.json())
         .then((res) => {
@@ -94,7 +94,7 @@ class App extends Component {
         });
     } else if (this.state.selectedLeague === 619) {
       fetch(
-        `https://app.sportdataapi.com/api/v1/soccer/standings?apikey=e698b620-4479-11eb-86f1-c11e8b8f9491&season_id=${this.state.selectedLeague}`
+        `https://app.sportdataapi.com/api/v1/soccer/standings?apikey=0265c4e0-4eb8-11eb-a192-b56af5b95b10&season_id=${this.state.selectedLeague}`
       )
         .then((data) => data.json())
         .then((res) => {
@@ -115,7 +115,7 @@ class App extends Component {
 
     if (this.state.selectedCategory === "scorers") {
       fetch(
-        `https://app.sportdataapi.com/api/v1/soccer/topscorers?apikey=e698b620-4479-11eb-86f1-c11e8b8f9491&season_id=${this.state.selectedLeague}`
+        `https://app.sportdataapi.com/api/v1/soccer/topscorers?apikey=0265c4e0-4eb8-11eb-a192-b56af5b95b10&season_id=${this.state.selectedLeague}`
       )
         .then((data) => data.json())
         .then((res) => {
@@ -134,7 +134,7 @@ class App extends Component {
         });
     } else if (this.state.selectedCategory === "matches") {
       fetch(
-        `https://app.sportdataapi.com/api/v1/soccer/matches?apikey=e698b620-4479-11eb-86f1-c11e8b8f9491&season_id=${this.state.selectedLeague}&date_from=${this.state.fromDate}&date_to=${this.state.untilDate}`
+        `https://app.sportdataapi.com/api/v1/soccer/matches?apikey=0265c4e0-4eb8-11eb-a192-b56af5b95b10&season_id=${this.state.selectedLeague}&date_from=${this.state.fromDate}&date_to=${this.state.untilDate}`
       )
         .then((data) => data.json())
         .then((res) => {
@@ -153,7 +153,7 @@ class App extends Component {
         });
     } else if (this.state.selectedCategory === "standings") {
       fetch(
-        `https://app.sportdataapi.com/api/v1/soccer/standings?apikey=e698b620-4479-11eb-86f1-c11e8b8f9491&season_id=${this.state.selectedLeague}`
+        `https://app.sportdataapi.com/api/v1/soccer/standings?apikey=0265c4e0-4eb8-11eb-a192-b56af5b95b10&season_id=${this.state.selectedLeague}`
       )
         .then((data) => data.json())
         .then((res) => {
